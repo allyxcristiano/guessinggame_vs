@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GuessingGame.service
 {
-    class GuessingGameService
+    public class GuessingGameService
     {
         private IGuessingGameMessages guessingGameMessages;
 
@@ -19,7 +19,7 @@ namespace GuessingGame.service
         public Boolean startGame()
         {
             Response response = this.guessingGameMessages.ThinkAboutAnAnimal();
-            return response == Response.OK;
+            return response == Response.Ok;
         }
 
         public void doQuestion(Node node)

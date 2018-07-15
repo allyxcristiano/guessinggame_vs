@@ -27,7 +27,7 @@ namespace GuessingGame.implementation
                 this.theTraitOfAnimalThatYouThoughtAbout = whatTheAnimalTrait.AnimalTrait;
             }
 
-            return (result == System.Windows.Forms.DialogResult.OK) ? Response.OK : Response.Cancel;
+            return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;
         }
 
         public Response doesTheAnimalThatYouThoughtAbout(string trait)
@@ -62,7 +62,7 @@ namespace GuessingGame.implementation
         public Response ThinkAboutAnAnimal()
         {
             DialogResult result = MessageBox.Show("Think about an animal...", "Guessing Game", MessageBoxButtons.OKCancel);
-            return (result == System.Windows.Forms.DialogResult.OK) ? Response.OK : Response.Cancel;
+            return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;
         }
 
         public Response whatWasTheAnimalThatYouThoughtAbout()
@@ -75,7 +75,7 @@ namespace GuessingGame.implementation
                 this.theAnimalThatYouThoughtAbout = whatTheAnimal.AnimalName;
             }
 
-            return (result == System.Windows.Forms.DialogResult.OK) ? Response.OK : Response.Cancel;
+            return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;
         }
     }
 }

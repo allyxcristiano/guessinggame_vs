@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GuessingGame
 {
-    public enum Response { No, Yes, OK, Cancel};
+    public enum Response { No, Yes, Ok, Cancel};
 
     public interface IGuessingGameMessages
     {
