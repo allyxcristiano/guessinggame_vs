@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGame", "GuessingGame.csproj", "{4944456F-8101-4DC1-8534-A43E13860E2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGameTests", "..\GuessingGameTests\GuessingGameTests.csproj", "{63330656-E0DF-4A24-A1D7-C9D4CDB99259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessingGameTests2", "GuessingGameTests\GuessingGameTests2.csproj", "{63330656-E0DF-4A24-A1D7-C9D4CDB99259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
