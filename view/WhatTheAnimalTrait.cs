@@ -18,6 +18,7 @@ namespace GuessingGame
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.tbAnimalTrait.Select();
             string defaultText = this.lQuestion.Text;
             this.lQuestion.Text = String.Format(defaultText, animalA, animalB);
         }
@@ -25,11 +26,16 @@ namespace GuessingGame
         private void bOK_Click(object sender, EventArgs e)
         {
             this.AnimalTrait = this.tbAnimalTrait.Text;
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Close();
         }
 
-        private void tbAnimalTrait_Enter(object sender, EventArgs e)
+        private void tbAnimalTrait_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.bOK_Click(sender, e);
+            if (e.KeyChar == 13)
+            {
+                this.bOK_Click(sender, e);
+            }
         }
     }
 }

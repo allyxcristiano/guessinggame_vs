@@ -50,7 +50,7 @@
             this.tbAnimalName.Name = "tbAnimalName";
             this.tbAnimalName.Size = new System.Drawing.Size(544, 20);
             this.tbAnimalName.TabIndex = 1;
-            this.tbAnimalName.Enter += new System.EventHandler(this.tbAnimalName_Enter);
+            this.tbAnimalName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAnimalName_KeyPress);
             // 
             // label1
             // 

@@ -17,18 +17,23 @@ namespace GuessingGame
         public WhatTheAnimal()
         {
             InitializeComponent();
-            this.tbAnimalName.Focus();
+            this.tbAnimalName.Select();
             this.CenterToScreen();
         }
 
         private void bOK_Click(object sender, EventArgs e)
         {
             this.AnimalName = this.tbAnimalName.Text;
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Close();
         }
 
-        private void tbAnimalName_Enter(object sender, EventArgs e)
+        private void tbAnimalName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.bOK_Click(sender, e);
+            if (e.KeyChar == 13)
+            {
+                this.bOK_Click(sender, e);
+            }
         }
     }
 }

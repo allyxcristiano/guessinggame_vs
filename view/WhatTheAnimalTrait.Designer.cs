@@ -49,7 +49,7 @@
             this.tbAnimalTrait.Name = "tbAnimalTrait";
             this.tbAnimalTrait.Size = new System.Drawing.Size(544, 20);
             this.tbAnimalTrait.TabIndex = 4;
-            this.tbAnimalTrait.Enter += new System.EventHandler(this.tbAnimalTrait_Enter);
+            this.tbAnimalTrait.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAnimalTrait_KeyPress);
             // 
             // bOK
             // 
