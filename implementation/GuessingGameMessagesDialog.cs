@@ -9,9 +9,9 @@ namespace GuessingGame.implementation
 {
     public class GuessingGameMessagesDialog : IGuessingGameMessages
     {
-        private string theAnimalThatYouThoughtAbout;
+        private string TheAnimalThatYouThoughtAbout;
 
-        private string theTraitOfAnimalThatYouThoughtAbout;
+        private string TheTraitOfAnimalThatYouThoughtAbout;
 
         public GuessingGameMessagesDialog()
         {
@@ -24,7 +24,7 @@ namespace GuessingGame.implementation
 
             if (result == DialogResult.OK)
             {
-                this.theTraitOfAnimalThatYouThoughtAbout = whatTheAnimalTrait.AnimalTrait;
+                this.TheTraitOfAnimalThatYouThoughtAbout = whatTheAnimalTrait.AnimalTrait;
             }
 
             return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;
@@ -39,12 +39,12 @@ namespace GuessingGame.implementation
 
         public string getTheAnimalThatYouThoughtAbout()
         {
-            return this.theAnimalThatYouThoughtAbout;
+            return this.TheAnimalThatYouThoughtAbout;
         }
 
         public string getTheTraitOfAnimalThatYouThoughtAbout()
         {
-            return this.theTraitOfAnimalThatYouThoughtAbout;
+            return this.TheTraitOfAnimalThatYouThoughtAbout;
         }
 
         public Response isTheAnimalThatYouThoughtAboutA(string animal)
@@ -72,7 +72,7 @@ namespace GuessingGame.implementation
 
             if (result == DialogResult.OK)
             {
-                this.theAnimalThatYouThoughtAbout = whatTheAnimal.AnimalName;
+                this.TheAnimalThatYouThoughtAbout = whatTheAnimal.AnimalName;
             }
 
             return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;

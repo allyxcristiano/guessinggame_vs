@@ -9,16 +9,16 @@ namespace GuessingGame.service
 {
     public class GuessingGameService
     {
-        private IGuessingGameMessages guessingGameMessages;
+        private IGuessingGameMessages GuessingGameMessages;
 
         public GuessingGameService(IGuessingGameMessages guessingGameMessages)
         {
-            this.guessingGameMessages = guessingGameMessages;
+            this.GuessingGameMessages = guessingGameMessages;
         }
 
         public Boolean startGame()
         {
-            Response response = this.guessingGameMessages.ThinkAboutAnAnimal();
+            Response response = this.GuessingGameMessages.ThinkAboutAnAnimal();
             return response == Response.Ok;
         }
 
@@ -31,7 +31,7 @@ namespace GuessingGame.service
             {
                 Trait currentTrait = node.Traits[index];
 
-                awnser = this.guessingGameMessages.doesTheAnimalThatYouThoughtAbout(currentTrait.Name);
+                awnser = this.GuessingGameMessages.doesTheAnimalThatYouThoughtAbout(currentTrait.Name);
                 if (awnser == Response.Yes && currentTrait.NodeForSpecializatedTrait != null)
                 {
                     this.doQuestion(currentTrait.NodeForSpecializatedTrait);
@@ -41,22 +41,22 @@ namespace GuessingGame.service
                 index++;
             }
 
-            awnser = this.guessingGameMessages.isTheAnimalThatYouThoughtAboutA(node.AnimalSuperiorTrait.Name);
+            awnser = this.GuessingGameMessages.isTheAnimalThatYouThoughtAboutA(node.AnimalSuperiorTrait.Name);
             if (awnser == Response.No)
             {
-                awnser = this.guessingGameMessages.whatWasTheAnimalThatYouThoughtAbout();
+                awnser = this.GuessingGameMessages.whatWasTheAnimalThatYouThoughtAbout();
 
                 if (awnser == Response.Cancel)
                     return;
 
-                string animal = this.guessingGameMessages.getTheAnimalThatYouThoughtAbout();
+                string animal = this.GuessingGameMessages.getTheAnimalThatYouThoughtAbout();
 
-                awnser = this.guessingGameMessages.aAnimalAHasButAnimalBDoesNot(animal, node.AnimalSuperiorTrait.Name);
+                awnser = this.GuessingGameMessages.aAnimalAHasButAnimalBDoesNot(animal, node.AnimalSuperiorTrait.Name);
 
                 if (awnser == Response.Cancel)
                     return;
 
-                string trait = this.guessingGameMessages.getTheTraitOfAnimalThatYouThoughtAbout();
+                string trait = this.GuessingGameMessages.getTheTraitOfAnimalThatYouThoughtAbout();
 
                 Trait newSpecializatedTrait = new Trait(trait);
                 Animal newAnimal = new Animal(animal);
@@ -66,7 +66,7 @@ namespace GuessingGame.service
             }
             else
             {
-                this.guessingGameMessages.iWinAgain();
+                this.GuessingGameMessages.iWinAgain();
             }
         }
 

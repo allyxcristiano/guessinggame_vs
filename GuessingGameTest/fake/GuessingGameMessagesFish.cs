@@ -9,13 +9,13 @@ namespace GuessingGameTests.fake
 {
     public class GuessingGameMessagesFish : IGuessingGameMessages
     {
-        private string theAnimalThatYouThoughtAbout;
+        private string TheAnimalThatYouThoughtAbout;
 
-        private string theTraitOfAnimalThatYouThoughtAbout;
+        private string TheTraitOfAnimalThatYouThoughtAbout;
 
         public Response aAnimalAHasButAnimalBDoesNot(string animalA, string animalB)
         {
-            this.theTraitOfAnimalThatYouThoughtAbout = "lives in agua doce";
+            this.TheTraitOfAnimalThatYouThoughtAbout = "lives in agua doce";
             return Response.Ok;
         }
 
@@ -26,12 +26,12 @@ namespace GuessingGameTests.fake
 
         public string getTheAnimalThatYouThoughtAbout()
         {
-            return theAnimalThatYouThoughtAbout;
+            return TheAnimalThatYouThoughtAbout;
         }
 
         public string getTheTraitOfAnimalThatYouThoughtAbout()
         {
-            return theTraitOfAnimalThatYouThoughtAbout;
+            return TheTraitOfAnimalThatYouThoughtAbout;
         }
 
         public Response isTheAnimalThatYouThoughtAboutA(string animal)
@@ -50,7 +50,7 @@ namespace GuessingGameTests.fake
 
         public Response whatWasTheAnimalThatYouThoughtAbout()
         {
-            this.theAnimalThatYouThoughtAbout = "fish";
+            this.TheAnimalThatYouThoughtAbout = "fish";
             return Response.Ok;
         }
     }
