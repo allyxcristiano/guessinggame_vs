@@ -59,7 +59,7 @@ namespace GuessingGame.implementation
             MessageBox.Show("I win again!", "Guessing Game", MessageBoxButtons.OK);
         }
 
-        public Response ThinkAboutAnAnimal()
+        public Response thinkAboutAnAnimal()
         {
             DialogResult result = MessageBox.Show("Think about an animal...", "Guessing Game", MessageBoxButtons.OKCancel);
             return (result == System.Windows.Forms.DialogResult.OK) ? Response.Ok : Response.Cancel;

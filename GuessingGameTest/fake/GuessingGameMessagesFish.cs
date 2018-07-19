@@ -43,7 +43,7 @@ namespace GuessingGameTests.fake
         {
         }
 
-        public Response ThinkAboutAnAnimal()
+        public Response thinkAboutAnAnimal()
         {
             return Response.Ok;
         }

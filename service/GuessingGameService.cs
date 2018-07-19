@@ -18,7 +18,7 @@ namespace GuessingGame.service
 
         public Boolean startGame()
         {
-            Response response = this.GuessingGameMessages.ThinkAboutAnAnimal();
+            Response response = this.GuessingGameMessages.thinkAboutAnAnimal();
             return response == Response.Ok;
         }
 

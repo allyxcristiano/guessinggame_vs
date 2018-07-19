@@ -10,7 +10,7 @@ namespace GuessingGame
 
     public interface IGuessingGameMessages
     {
-        Response ThinkAboutAnAnimal();
+        Response thinkAboutAnAnimal();
 
         Response doesTheAnimalThatYouThoughtAbout(string trait);
 
